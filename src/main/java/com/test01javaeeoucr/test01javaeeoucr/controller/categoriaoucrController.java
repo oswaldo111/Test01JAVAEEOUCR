@@ -37,13 +37,13 @@ public class categoriaoucrController {
     }
 
      @GetMapping("/editar/{id}")
-      public String mostrarFormularioEditarPersona(@PathVariable Long id, Model model) {
+      public String mostrarFormularioEditarCategoria(@PathVariable Long id, Model model) {
           model.addAttribute("categoria", categoriaoucrService.obtenerPorId(id));
           return "categoria/categoria-forn";
       }
   
       @GetMapping("/eliminar/{id}")
-      public String eliminarPersona(@PathVariable Long id) {
+      public String eliminarCategoria(@PathVariable Long id) {
           categoriaoucrService.eliminar(id);
           return "redirect:/categoria";
       }

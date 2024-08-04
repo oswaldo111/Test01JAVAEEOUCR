@@ -12,7 +12,7 @@ public class marcaoucr {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nombre;
+    private String nombreoucr;
 
     public marcaoucr() {
         
@@ -20,7 +20,7 @@ public class marcaoucr {
 
     public marcaoucr(Long id, String nombre) {
         this.id = id;
-        this.nombre = nombre;
+        this.nombreoucr = nombre;
     }
 
     public Long getId() {
@@ -31,12 +31,12 @@ public class marcaoucr {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreoucr() {
+        return nombreoucr;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreoucr(String nombreoucr) {
+        this.nombreoucr = nombreoucr;
     }
 
     
