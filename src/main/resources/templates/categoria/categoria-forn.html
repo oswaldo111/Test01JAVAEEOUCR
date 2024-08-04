@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario de categoria</title>
+</head>
+<body>
+    <h1 th:text="${categoria.id == null} ? 'Nueva categoria' : 'Editar categoria'"></h1>
+    <form th:action="@{/categoria}" th:object="${categoria}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" />
+        <label>Descripcion:</label>
+        <input type="text" th:field="*{descripcion}" />
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="/categoria">Volver a la lista</a>
+</body>
+</html>
