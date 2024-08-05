@@ -12,17 +12,17 @@ public class categoriaoucr {
       @GeneratedValue(strategy = GenerationType.IDENTITY)
       private Long id;
 
-      private String nombre;
-      private String descripcion;
+      private String nombreoucr;
+      private String descripcionoucr;
 
-      public categoriaoucr() {
+    public categoriaoucr() {
         
-      }
+    }
 
-    public categoriaoucr(Long id, String nombre, String descipcion) {
+    public categoriaoucr(Long id, String nombreoucr, String descripcionoucr) {
         this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descipcion;
+        this.nombreoucr = nombreoucr;
+        this.descripcionoucr = descripcionoucr;
     }
 
     public Long getId() {
@@ -33,20 +33,20 @@ public class categoriaoucr {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreoucr() {
+        return nombreoucr;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreoucr(String nombreoucr) {
+        this.nombreoucr = nombreoucr;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescripcionoucr() {
+        return descripcionoucr;
     }
 
-    public void setDescripcion(String descipcion) {
-        this.descripcion = descipcion;
+    public void setDescripcionoucr(String descripcionoucr) {
+        this.descripcionoucr = descripcionoucr;
     }
 
       

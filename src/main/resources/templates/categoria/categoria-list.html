@@ -3,6 +3,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>categoria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
   <a th:href="@{/categoria/nuevo}">nuevo</a>
@@ -18,8 +20,8 @@
         <tbody>
           <tr th:each="categoria : ${categorias}">
             <td th:text="${categoria.id}"></td>
-            <td th:text="${categoria.nombre}"></td>
-            <td th:text="${categoria.descripcion}"></td>
+            <td th:text="${categoria.nombreoucr}"></td>
+            <td th:text="${categoria.descripcionoucr}"></td>
             <td>
               <a th:href="@{/categoria/editar/{id}(id=${categoria.id})}">Editar</a>
               <a th:href="@{/categoria/eliminar/{id}(id=${categoria.id})}">Eliminar</a>

@@ -2,15 +2,17 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Formulario de categoria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
 <body>
     <h1 th:text="${categoria.id == null} ? 'Nueva categoria' : 'Editar categoria'"></h1>
     <form th:action="@{/categoria}" th:object="${categoria}" method="post">
         <input type="hidden" th:field="*{id}" />
         <label>Nombre:</label>
-        <input type="text" th:field="*{nombre}" />
+        <input type="text" th:field="*{nombreoucr}" />
         <label>Descripcion:</label>
-        <input type="text" th:field="*{descripcion}" />
+        <input type="text" th:field="*{descripcionoucr}" />
         <button type="submit">Guardar</button>
     </form>
     <a href="/categoria">Volver a la lista</a>

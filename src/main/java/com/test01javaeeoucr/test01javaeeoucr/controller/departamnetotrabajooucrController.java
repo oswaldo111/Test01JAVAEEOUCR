@@ -14,7 +14,7 @@ import com.test01javaeeoucr.test01javaeeoucr.service.departamnetotrabajooucrServ
 
 
 @Controller
-@RequestMapping("departamneto")
+@RequestMapping("departamento")
 public class departamnetotrabajooucrController {
     
     @Autowired
@@ -35,7 +35,7 @@ public class departamnetotrabajooucrController {
     @PostMapping
     public String guardardepartamento(departamnetotrabajooucr departamentooucr) {
         departamnetotrabajooucrService.guardar(departamentooucr);
-        return "redirect:/departamneto";
+        return "redirect:/departamento";
     }
 
      @GetMapping("/editar/{id}")
@@ -47,6 +47,6 @@ public class departamnetotrabajooucrController {
       @GetMapping("/eliminar/{id}")
       public String eliminardepartamento(@PathVariable Long id) {
           departamnetotrabajooucrService.eliminar(id);
-          return "redirect:/departamneto";
+          return "redirect:/departamento";
       }
 }
