@@ -19,31 +19,31 @@ public class clienteoucrController {
     private clienteoucrService clienteoucrService;
 
     @GetMapping
-    public String listarPersonas(Model model) {
+    public String listarCliente(Model model) {
         model.addAttribute("cliente", clienteoucrService.listarTodas());
         return "cliente/cliente-list";
     }
 
     @GetMapping("/nuevo")
-    public String mostrarFormularioNuevamarca(Model model) {
+    public String mostrarFormularioNuevoCliente(Model model) {
         model.addAttribute("cliente", new clienteoucr());
         return "cliente/cliente-forn";
     }
 
     @PostMapping
-    public String guardarmarca(clienteoucr clienteoucr) {
+    public String guardarCliente(clienteoucr clienteoucr) {
         clienteoucrService.guardar(clienteoucr);
         return "redirect:/cliente";
     }
 
      @GetMapping("/editar/{id}")
-      public String mostrarFormularioEditarMarca(@PathVariable Long id, Model model) {
+      public String mostrarFormularioEditarCliente(@PathVariable Long id, Model model) {
           model.addAttribute("cliente", clienteoucrService.obtenerPorId(id));
           return "cliente/cliente-forn";
       }
   
       @GetMapping("/eliminar/{id}")
-      public String eliminarMarca(@PathVariable Long id) {
+      public String eliminarCliente(@PathVariable Long id) {
           clienteoucrService.eliminar(id);
           return "redirect:/cliente";
       }

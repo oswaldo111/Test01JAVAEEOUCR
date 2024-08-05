@@ -19,19 +19,19 @@ public class marcaController {
     private marcaoucrService marcaoucrService;
 
     @GetMapping
-    public String listarPersonas(Model model) {
+    public String listarMarcas(Model model) {
         model.addAttribute("marcas", marcaoucrService.listarTodas());
         return "marca/marca-list";
     }
 
     @GetMapping("/nuevo")
-    public String mostrarFormularioNuevamarca(Model model) {
+    public String mostrarFormularioNuevaMarca(Model model) {
         model.addAttribute("marca", new marcaoucr());
         return "marca/marca-forn";
     }
 
     @PostMapping
-    public String guardarmarca(marcaoucr marcaoucr) {
+    public String guardarMarca(marcaoucr marcaoucr) {
         marcaoucrService.guardar(marcaoucr);
         return "redirect:/marca";
     }

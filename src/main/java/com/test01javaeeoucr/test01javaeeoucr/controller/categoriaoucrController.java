@@ -19,7 +19,7 @@ public class categoriaoucrController {
     private categoriaoucrService categoriaoucrService;
 
     @GetMapping
-    public String listarPersonas(Model model) {
+    public String listarCategoria(Model model) {
         model.addAttribute("categorias", categoriaoucrService.listarTodas());
         return "categoria/categoria-list";
     }
