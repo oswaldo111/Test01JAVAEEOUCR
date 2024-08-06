@@ -5,25 +5,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-4">
-        <h1 th:text="${departamento.id == null} ? 'Nuevo Departamento' : 'Editar Departamento'"></h1>
-        <form th:action="@{/departamento}" th:object="${departamento}" method="post">
-            <input type="hidden" th:field="*{id}" />
-            <div class="form-group">
-                <label for="nombreoucr">Nombre:</label>
-                <input type="text" id="nombreoucr" th:field="*{nombreoucr}" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label for="telefonooucr">Teléfono:</label>
-                <input type="text" id="telefonooucr" th:field="*{telefonooucr}" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label for="jefeoucr">Jefe:</label>
-                <input type="text" id="jefeoucr" th:field="*{jefeoucr}" class="form-control" />
-            </div>
-            <button type="submit" class="btn btn-primary">Guardar</button>
-        </form>
-        <a href="#" th:href="@{/departamento}" class="btn btn-secondary mt-3">Volver a la lista</a>
-    </div>
+    <h1 class="text-center mb-5 mt-3" th:text="${departamento.id == null} ? 'Nuevo Departamento' : 'Editar Departamento'"></h1>
+    
+    <div class="d-flex justify-content-center align-items-center   " >
+        <div class=" justify-content-center border w-25 border-danger">
+        
+
+            <form class="mx-3 mt-2" th:action="@{/departamento}" th:object="${departamento}" method="post">
+                <input type="hidden" th:field="*{id}" />
+                <div class="form-group">
+                    <label for="nombreoucr">Nombre:</label>
+                    <input type="text" id="nombreoucr" th:field="*{nombreoucr}" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="telefonooucr">Teléfono:</label>
+                    <input type="text" id="telefonooucr" th:field="*{telefonooucr}" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="jefeoucr">Jefe:</label>
+                    <input type="text" id="jefeoucr" th:field="*{jefeoucr}" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+            <a href="#" th:href="@{/departamento}" class="btn btn-info mt-3 mb-3 mx-3">Volver a la lista</a>
+        
+        </div>
+        </div>
+
 </body>
 </html>

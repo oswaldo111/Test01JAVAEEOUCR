@@ -6,13 +6,20 @@
 
 </head>
 <body>
-    <h1 th:text="${marca.id == null} ? 'Nueva marca' : 'Editar marca'"></h1>
-    <form th:action="@{/marca}" th:object="${marca}" method="post">
-        <input type="hidden" th:field="*{id}" />
-        <label>Nombre:</label>
-        <input type="text" th:field="*{nombreoucr}" />
-        <button type="submit">Guardar</button>
-    </form>
-    <a href="/marca">Volver a la lista</a>
+    <h1 class="text-center mb-5 mt-3" th:text="${marca.id == null} ? 'Nueva marca' : 'Editar marca'"></h1>
+
+    <div class="d-flex justify-content-center align-items-center   " >
+        <div class=" justify-content-center border w-25 border-danger">
+        
+            <form class="mx-3 mt-2" th:action="@{/marca}" th:object="${marca}" method="post">
+                <input type="hidden" th:field="*{id}" />
+                <label>Nombre:</label>
+                <input class="form-control" type="text" th:field="*{nombreoucr}" />
+                <button class="btn btn-primary mt-3 mb-3" type="submit">Guardar</button>
+            </form>
+            <a class="btn btn-info mx-3 mb-3" href="/marca">Volver a la lista</a>
+        
+        </div>
+        </div>
 </body>
 </html>
